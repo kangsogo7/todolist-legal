@@ -1,0 +1,54 @@
+:root {
+  --bg: #f4f3f8;
+  --card: #ffffff;
+  --text: #191630;
+  --sub: #5f5b75;
+  --line: #e2e0ea;
+  --accent: #5b50d6;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121119;
+    --card: #1a1923;
+    --text: #f5f4fa;
+    --sub: #aaa7b8;
+    --line: #2c2a38;
+    --accent: #a29bf5;
+    color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.75 -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding-block: 48px 72px;
+  padding-left: max(20px, env(safe-area-inset-left, 0px));
+  padding-right: max(20px, env(safe-area-inset-right, 0px));
+}
+.eyebrow { margin: 0 0 6px; font-size: 14px; font-weight: 700; letter-spacing: 0.04em; color: var(--accent); }
+h1 { margin: 0 0 8px; font-size: 30px; line-height: 1.3; text-wrap: balance; }
+.meta { margin: 0 0 32px; color: var(--sub); font-size: 14px; }
+h2 { margin: 40px 0 10px; font-size: 19px; line-height: 1.4; }
+h3 { margin: 22px 0 6px; font-size: 16px; }
+p, li { color: var(--text); }
+ul, ol { padding-left: 1.3em; }
+li + li { margin-top: 4px; }
+a { color: var(--accent); }
+.note { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; margin: 16px 0; }
+.table { overflow-x: auto; margin: 12px 0; }
+table { border-collapse: collapse; width: 100%; min-width: 560px; font-size: 14.5px; background: var(--card); }
+th, td { border: 1px solid var(--line); padding: 10px 12px; text-align: left; vertical-align: top; line-height: 1.6; }
+th { font-weight: 700; }
+nav { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 15px; }
+.cards { display: grid; gap: 12px; margin-top: 24px; }
+.cards a { display: block; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 18px 20px; text-decoration: none; color: var(--text); font-weight: 700; font-size: 17px; }
+.cards a span { display: block; font-weight: 400; font-size: 14px; color: var(--sub); }
