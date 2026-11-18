@@ -96,5 +96,13 @@
 
 <nav><a href="./">함께 할 일</a><a href="terms.html">이용약관</a></nav>
 </main>
+<script>
+document.querySelectorAll("table").forEach(function (t) {
+  var heads = Array.prototype.map.call(t.querySelectorAll("thead th"), function (th) { return th.textContent; });
+  t.querySelectorAll("tbody tr").forEach(function (tr) {
+    Array.prototype.forEach.call(tr.children, function (td, i) { td.setAttribute("data-label", heads[i] || ""); });
+  });
+});
+</script>
 </body>
 </html>
